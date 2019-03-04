@@ -1,20 +1,21 @@
-
 ---
-layout:post
-title:"hows my week so far"
-date:2019-02-13
+layout:     post
+title :     "The start of my journey"
+date :      2019-03-04
 ---
 
-### My week so far
-Hello there hope you all good, my week at the TCG was not as easy as chasing a tortoise but i learned so much about coding within a short period of time.I was taught about HTML and CSS which is a brand new world to me, the other thing i picked up on my own about computers is that they always follow the programme, they are reliable but not trustworthy and believe me or not coding is more fun than the word itself.Some of the elements I enjoyed most were that of CSS 'padding,margins and borders.The typing practise is fun, if one loses track of time they might find themselve's doing it the whole day.
+### Collen Maphike
+Dr Albert Einstein once said and I quote "If you judge a fish by its ability to climb a tree it will live it's whole life believing it is useless, believing it is useless."
+Ladies and gentlemen of the *cyber world* today I proudly present to you my second blog post, barring in mind the fact that it takes courage to build a legacy. I've lived my whole life without a machine but that did not change my ambition towards being a software developer.
 
-### Meeting new people
-I used to spend most of my days alone, you can call me a loner but not anymore because I met this new crew and guess what? I injoy their company and their principles, one of the things I like most about them is loyalty and respect.The coding Ground (TCG) students work as a team and they encouraged me that team work archive's the dream  work.The TCG is not giving a hungry man a fish, instead they teach him how to fish and here I am writting my first blog post.
+## Ambition vs Passion 
+I, myself and no Ghandi have always been ambitious about being a programmer, you know what they say **"fortune favors the bold"** and when I had a chance to express my ambition I just stood by the machine wide eyed like a mothley demon stunned by the first burst of spring light.
+This is the most exciting journey I've encounted in my very short life.
+To be honest I was passionate about computers, they are fascinating little wants which most of those who are not born with a silver spoons desire, but we try by all means to understand them even though every effort we make seems like pissing into the the wind. I guess it was a stae of amition vs passion.
 
-### Exploring the cyber world
-The cyber world is a very great place where learning is made simple and enjoyable, Exploring this cyber world was not an easy peacy lemon squeezy thing. This world has an evolution of it's own, it has it's unique and fascinating areas where the work of fiction is mixed up with technology, It also has its bumps and turns of tantrums where some masters believe that if all you ever gave was a hammer then every thing they see is a nail.What fascinates me more about this world is that the laws of evolution apply, from Natural selection to the law of use and dis-use. 
-
-
+## Coding 
+It seems complicated than it's explanation but as you do it more often it becomes part of you like an orgasim, trust me 'been there,done that', it requires a certain aspect of understanding the machines and their nature. It's like there is a link between them and humans which most of us cannot understand even though they were invented by humans their evolution is way faster than ours', I mean their masters because they always follow our programme.
+Their' fascinating creatures of their own and I hope to understand them in the course of time, as a matter of fact I wish to follow them till the end of time. 
 
 
 
