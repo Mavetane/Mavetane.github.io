@@ -4,7 +4,7 @@ title :     "The start of my journey"
 date :      2019-03-04
 ---
 
-# The start of my journey
+### Collen Maphike
 Dr Albert Einstein once said and I quote "If you judge a fish by its ability to climb a tree it will live it's whole life believing it is useless, believing it is useless."
 Ladies and gentlemen of the *cyber world* today I proudly present to you my second blog post, barring in mind the fact that it takes courage to build a legacy. I've lived my whole life without a machine but that did not change my ambition towards being a software developer.
 
