@@ -1,0 +1,60 @@
+[33mcommit 1ccf00024dbf6cf125c16b6079e4e3e6e0365fc1[m
+Author: vuyisile <vuyisilemark@gmail.com>
+Date:   Mon Mar 4 14:34:15 2019 +0200
+
+    The-start-of-my-journey
+
+[33mcommit b73336880811f8aadb1319a03ea5127ffb66886b[m
+Author: tcg <you@example.com>
+Date:   Thu Feb 14 09:55:34 2019 +0200
+
+    My week so far
+
+[33mcommit 88a868181fd26b06b3ee3465d326073f34df4e79[m
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 15:30:05 2019 +0200
+
+     wrote my first blog post
+
+[33mcommit 77a1ee305171abb66646cfed3ec28311cf0555a7[m
+Merge: cc39c87 da08880
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 15:11:14 2019 +0200
+
+    Merge branch 'master' of https://github.com/Mavetane/Mavetane.github.io
+
+[33mcommit cc39c87bffd3ec8a87a3c2234750c9469d6d0c27[m
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 15:08:06 2019 +0200
+
+    added my first blog post layout
+
+[33mcommit da08880b3f2f484e58ce3472146a2d9dcf2c2248[m
+Author: Mavetane <47519788+Mavetane@users.noreply.github.com>
+Date:   Wed Feb 13 14:57:38 2019 +0200
+
+    Set theme jekyll-theme-hacker
+
+[33mcommit 3c7bbb4007e6b0daead5dfd6a0058aa4f0945441[m
+Author: Mavetane <47519788+Mavetane@users.noreply.github.com>
+Date:   Wed Feb 13 14:56:36 2019 +0200
+
+    remove email address
+
+[33mcommit 4ef215897e97662595926e50133224be242b78a9[m
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 14:54:19 2019 +0200
+
+    setting up github pages
+
+[33mcommit 72272424fbaa947d39ffeed8a2bb7b2e589d6372[m
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 14:49:19 2019 +0200
+
+    edit personal details
+
+[33mcommit 58a36adc3ff9b029bfb6f0516e656316b6631d43[m
+Author: tcg <you@example.com>
+Date:   Wed Feb 13 14:24:18 2019 +0200
+
+    addreadme
