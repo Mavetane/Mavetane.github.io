@@ -1,0 +1,63 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+
+
+a{
+    text-decoration: none;
+    transition: all;
+    color:black;
+    transition-duration: 0.5s;
+}
+
+li{
+    list-style: none;
+    font-family: Courier New, Courier, monospace;
+    text-transform: uppercase;
+}
+
+ul{
+    padding:20px;
+    display:grid;
+    grid-template-columns: 4fr repeat(4 , 1fr);
+
+}
+
+nav{
+        background-color:grey;
+        /* color:red; */
+}
+
+a:hover{
+    color:white;
+
+}
+
+
+header{
+     background-image: url("photo.jpg");
+     background-color: #cccccc;
+     height:100vh;
+}
+
+h1{
+display: grid;
+padding: 40px 40px 40px 40px;
+text-align: center;
+font-size: 50px;
+
+
+}
+body{
+font-family: 'Sofia';
+font-size: 20px;
+
+}
+
+img{
+    padding-left: -20px;
+    margin-right: -1em;
+    display: block;
+}
