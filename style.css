@@ -16,6 +16,8 @@ li{
     list-style: none;
     font-family: Courier New, Courier, monospace;
     text-transform: uppercase;
+    font-style: bold;
+
 }
 
 ul{
@@ -60,4 +62,5 @@ img{
     padding-left: -20px;
     margin-right: -1em;
     display: block;
+    border-radius: 80%
 }
