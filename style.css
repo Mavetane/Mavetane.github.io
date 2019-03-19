@@ -64,3 +64,37 @@ img{
     display: block;
     border-radius: 80%
 }
+
+
+
+
+@media only screen and (max-width: 360px) {
+  body {
+    background-color: #cccccc;
+    /* font-size:1rem; */
+
+  }
+
+.hide{
+    display:none;
+}
+
+ul{
+    padding:20px;
+    display:grid;
+    grid-template-columns:  repeat(4 , 5rem);
+
+}
+
+a{
+    font-size:1rem;
+}
+header{
+     background-image: url("photo.jpg");
+     background-color: #cccccc;
+     height:100vh;
+
+img{
+    width:5rem;
+}
+}
