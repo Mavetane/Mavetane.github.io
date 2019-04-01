@@ -62,29 +62,42 @@ img{
     padding-left: -20px;
     margin-right: -1em;
     display: block;
-    border-radius: 80%
+    border-radius: 50%;
+    opacity: 0.5;
 }
 
+responsive{
+
+
+
+}
+
+.responsive{
+
+
+
+}
 
 
 
 @media only screen and (max-width: 360px) {
   body {
     background-color: #cccccc;
+    background-image: url("")
     /* font-size:1rem; */
 
   }
-
-.hide{
+/*   
+ .hide{
     display:none;
 }
 
 ul{
     padding:20px;
     display:grid;
-    grid-template-columns:  repeat(4 , 5rem);
-
-}
+    /* grid-template-columns:  repeat(4 , 5rem); */
+/* } */
+   
 
 a{
     font-size:1rem;
@@ -93,8 +106,48 @@ header{
      background-image: url("photo.jpg");
      background-color: #cccccc;
      height:100vh;
-
-img{
-    width:5rem;
+     background-size: cover;
+     background-position: center;
 }
+
+h1{
+display: grid;
+padding: 0px 40px 40px 40px;
+text-align: center;
+font-size: 40px;
+color: blue;
+}
+
+li{
+    list-style: none;
+    font-family: Courier New, Courier, monospace;
+    text-transform: uppercase;
+    font-style: bold; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
