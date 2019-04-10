@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container" onclick="myFunction(this)">
+    <div class="container" onclick="toggle()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -18,7 +18,7 @@
     </div>
     <nav>
 
-        <ul>
+        <ul class="hide">
             <li class="hide">
                 Vetleg@cy
             </li>
@@ -45,12 +45,32 @@
 
         <h1>Collen Maphike</h1>
         <div>
-            <!-- <img src="img.jpg" alt="Myself" class="responsive"> -->
-            <!-- <img src="photo.jpg" alr="background-image class=".responsive"> -->
+            <img src="img.jpg" alt="Myself" class="responsive">
+            <!-- <img src="photo.jpg" alr="background-image class=".responsive">  -->
 
         </div>
 
     </header>
+    <script>
+        var isToggle = true;
+        function toggle() {
+            var menu = document.querySelector("ul");
+
+            if (isToggle) {
+                menu.classList.add("show");
+                isToggle = false;
+            } else {
+                menu.classList.remove("show");
+                isToggle = true;
+            }
+
+            // if(isToggle == false){
+            // }
+
+            console.log(isToggle);
+
+        }
+    </script>
 
 </body>
 
