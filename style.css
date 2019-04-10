@@ -118,6 +118,7 @@ li{
 .container {
   display: inline-block;
   cursor: pointer;
+
 }
 
 .bar1, .bar2, .bar3 {
@@ -156,7 +157,25 @@ li{
     display:grid;
     display: unset;
     grid-template-rows: 4fr repeat(4 , 1fr);
-    grid-template-columns:1fr; 
+    grid-template-columns:1fr;}
+
+.responsive{
+    width: 50%;
+    height: 50%;
+}      
+ #img {
+     animation-name: fade;
+     animation-duration: 4s;
+     
+    
+ }
+     @keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 0.1;
+      
+    }
+
 
 
 
