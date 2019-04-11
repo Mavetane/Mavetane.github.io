@@ -25,4 +25,4 @@ Closley related to concepts such as *timeboxing* and *iterative and incremental 
 ## Tools
 The creator and his proponents encourage a low-tech approach,using a mechanical timer, paper, and pencil. 
 The physical act of winding the timer confirms the user's determination to start the task, ringing announces a break.
-**Flow** and**focus** become associated with these physical stimuli. 
+**Flow** and**focus** become associated with these physical stimuli.
