@@ -77,3 +77,15 @@ Another huge advantage of the spread operator, is the ability to combine arrays,
     // thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
 
 Using spread syntax, we have just achieved an operation that would have been more complex and more verbose had we used traditional methods.
+
+##  Check For The Presence of an Element With indexOf()
+
+Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.
+
+For example:
+
+    let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+    fruits.indexOf('dates') // returns -1
+    fruits.indexOf('oranges') // returns 2
+    fruits.indexOf('pears') // returns 1, the first index at which the element exists
