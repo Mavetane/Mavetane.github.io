@@ -2,7 +2,7 @@
 layout: post
 date: 2019-15-05
 title: Basic Algorithm Scripting
-----
+---
 
 Collen Maphike 
 
