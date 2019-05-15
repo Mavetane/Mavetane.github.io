@@ -1,7 +1,7 @@
 ---
-layout: post 
-title: "Basic Algorithm Scripting"
-date: 2019-15-05
+layout:   post 
+title:    "Basic Algorithm Scripting"
+date:     2019-15-05
 ---
 
 Collen Maphike 
