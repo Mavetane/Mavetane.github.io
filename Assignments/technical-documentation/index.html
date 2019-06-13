@@ -1,0 +1,74 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="main-body">
+<nav id="navbar">
+  <header>Python Documentation</header>
+  <a href="#Introduction" class="nav-link">Introduction</a>
+  <a href="#Python" class="nav-link">Python</a>
+  <a href="#Statements" class="nav-link">Statements</a>
+  <a href="Expressions" class="nav-link">Expressions</a>
+  <a href="Libraries" class="nav-link">Libraries</a>
+  
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. ... Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse.</p>
+    <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library</p>
+  </section>
+  <section class="main-section" id="JavaScript">
+    <header>Python</header>
+    <p>Python is intended to be a language that is easy to read. A well formatted Python code is clean and uncluttered.It usually utilizes English keywords where other programming languages utilizes punctuations.
+Unlike most other programming languages, Python does not utilize curly brackets for delimiting code blocks; instead, it utilizes whitespace indentation. Furthermore, placing semicolons after statements are not necessary.</p>
+    <p>Instead of designing Python with all the functionalities on its core, the programming language was meant to be very extensible.This feature has made the language highly popular when programmable interfaces are required to be incorporated into existing applications.</p>
+    <code>f expression:
+    statement(s)
+elif expression:
+    statement(s)
+elif expression:
+    statement(s)
+...
+else:
+    statement(s)</code>
+    <ul>
+      <li>Statements and control flow</li>
+      <li>Expressions</li>
+      <li>Libraries</li>
+      <li>Mathematics</li>
+      <li>Methods</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Variables">
+   <header> Statements</header>
+    <p>The assignment statement (token '=', the equals sign). This operates differently than in traditional imperative programming languages, and this fundamental mechanism (including the nature of Python's version of variables) illuminates many other features of the language. Assignment in C, e.g., x = 2, translates to "typed variable name x receives a copy of numeric value 2". The (right-hand) value is copied into an allocated storage location for which the (left-hand) variable name is the symbolic address. The memory allocated to the variable is large enough (potentially quite large) for the declared type. In the simplest case of Python assignment, using the same example, x = 2, translates to "(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2." This is termed binding the name to the object. Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable.</p>
+    <p>Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.</p>
+    <code>if x < 0: print "x is negative"
+elif x % 2: print "x is positive and odd"
+else: print "x is even and non-negative"</code>
+    <code>if x < 0:
+    print "x is negative"
+elif x % 2:
+    print "x is positive and odd"
+else:
+    print "x is even and non-negative"</code>
+  </section>
+  <section class="main-section" id="Scope">
+    <header>Expressions</header>
+    <p>Addition, subtraction, and multiplication are the same, but the behavior of division differs. There are two types of divisions in Python. They are floor division and integer division.[69] Python also added the ** operator for exponentiation.</p>
+    <p>In Python, == compares by value, versus Java, which compares numerics by value[72] and objects by reference.[73] (Value comparisons in Java on objects can be performed with the equals() method.) Python's is operator may be used to compare object identities (comparison by reference). In Python, comparisons may be chained, for example a <= b <= c.</p>
+    <code>>>> (x for x in range(10))
+<generator object <genexpr> at 0x7fec47aee870>
+>>> list(x for x in range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
+  </section>
+  <section class="main-section" id="Functions">
+    <header>Libraries</header> 
+    <p>Python's large standard library, commonly cited as one of its greatest strengths,[97] provides tools suited to many tasks. For Internet-facing applications, many standard formats and protocols such as MIME and HTTP are supported. It includes modules for creating graphical user interfaces, connecting to relational databases, generating pseudorandom numbers, arithmetic with arbitrary precision decimals</p>
+    <p>Some parts of the standard library are covered by specifications (for example, the Web Server Gateway Interface (WSGI) implementation wsgiref follows PEP 333[99]), but most modules are not. They are specified by their code, internal documentation, and test suites (if supplied). However, because most of the standard library is cross-platform Python code, only a few modules need altering or rewriting for variant implementations.
+
+As of March 2018, the Python Package Index (PyPI), the official repository for third-party Python software, contains over 130,000[100] packages with a wide range of functionality</p>
+    <code>defall(iterable):forelementiniterable:if notelement:return Falsereturn True</code>
+    <code>defany(iterable):forelementiniterable:ifelement:return Truereturn False</code>
+  </section>
+</main>
+    </div>
