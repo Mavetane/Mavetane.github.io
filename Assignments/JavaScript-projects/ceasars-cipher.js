@@ -10,7 +10,7 @@ function rot13(str) {
         }
         for(var j = 0; j < alpArray.length; j++){
             if(splittedString[i] == alpArray[j] && j <= 25){
-                console.log(alpArray[j]);
+                
                 decoded.push(alpArray[j + 13]);
             }
 
