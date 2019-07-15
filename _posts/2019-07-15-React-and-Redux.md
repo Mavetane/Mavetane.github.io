@@ -4,6 +4,8 @@ title: React and Redux
 date: 2019-07-15
 ---
 
+Collen Maphike
+
 
 #React and Redux
 
