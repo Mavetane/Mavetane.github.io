@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React and Redux
-date: 2019-07-16
+date: 2019-16-07
 ---
 
 Collen Maphike
