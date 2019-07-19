@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React life-cycle methods
-date: 2019-16-07
+date: 2019-07-16
 ---
 
 Collen Maphike
