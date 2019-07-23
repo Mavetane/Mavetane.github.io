@@ -1,0 +1,37 @@
+.Header{
+  text-align: center;
+}
+
+.div{
+  text-align: center;
+  padding: 30px 0px 0px 0px;
+}
+
+.div-2{
+  border: 5px solid black;
+  border-radius: 80%;
+}
+
+.h2{
+  font-size: 50px;
+  color: black;
+}
+
+.button-1{
+  border: 9px solid green;
+  border-radius: 50%;
+  background-color: green;
+
+}
+
+.button-2{
+  border: 9px solid red;
+  border-radius: 50%;
+  background-color: red;
+
+}
+
+.displayed-time{
+  background-color: aqua;
+  border-radius: 80%;
+}
