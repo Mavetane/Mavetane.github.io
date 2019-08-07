@@ -1,3 +1,4 @@
+
 .Header{
   text-align: center;
 }
@@ -8,12 +9,14 @@
 }
 
 .div-2{
-  border: 5px solid black;
-  border-radius: 80%;
+  border: 5px solid #000000;
+  border-radius: 20%;
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .h2{
-  font-size: 50px;
+  font-size: 30px;
   color: black;
 }
 
@@ -31,7 +34,21 @@
 
 }
 
-.displayed-time{
-  background-color: aqua;
-  border-radius: 80%;
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.captured-times {
+  background-color: rgba(225,225, 225, 0.8);
+  border: 1px solid rgba(0,0,0,0.8);
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
 }
