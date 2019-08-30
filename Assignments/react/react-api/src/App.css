@@ -1,28 +1,48 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.Responsive{
+  margin: 100px 0px 50px 250px;
+  height: 150vh;
+  width: 150vh;
+  opacity: 0.4;
+  border-radius: 60%;
+  
+}
+
 .Info{
   text-align: center;
+  background-color: #ADD8E6;	
+  margin: 20px 20px -500px 0px;
+  border-style: inset;
+  padding-top: 20px;
 }
 
 .Align{
   text-align: left;
+  font-size: 25px;
+  padding-left: 70px;
+  padding-top: 20px;
 }
 
-.Li{
-  cursor: pointer;
-}
-Li:hover{
+.Hover:hover{
+  list-style: none;
   background-color: aqua;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .Header{
   font-family: 'Saira Stencil One', cursive;
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
   grid-area: Header;
   position: absolute;
   top:0;
   left:40%;
+  height: 100vh;
+
 
 }
 
@@ -32,22 +52,19 @@ Li:hover{
 }
 
 body{
-  background-color: #2196f3;
-}
-.App{
-  margin-top:5rem;
-  display: grid;
-  grid-template-columns: repeat(2 , 1fr);
-  grid-gap: 10px;
-  padding: 10px;
-
+  background-color: white;
 }
 
 .DisplayCompanyName{
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
-  margin: 50px 0px 0px -150px;
-
+  margin: 50px 50px -1600px 150px;
+  padding-left: 30px; 
+  padding-top: 20px;
+  background-color:	 #ADD8E6;
+  border-style: inset;
+  font-size: 25px;
 }
 
 .grid-container > div{
@@ -58,23 +75,18 @@ font-size: 30px;
 }
 
 button{
-  font-size: 15px;
-  background-color: darkturquoise;
-  font-family: 'Abril Fatface', cursive;
-  border-radius: 48%;
-  
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 18px;
+  background-color: white;
+  text-transform: uppercase;
+  font-family:  'Oswald', sans-serif;  
 }
 
 button:hover{
-  font-family: 'Abril Fatface', cursive;
   cursor: pointer;
-  font-size: 25px;
-  background-color: rgba(68, 211, 80, 0.986);
-}
-
-h5{
-  font-family: 'Courgette', cursive;
   font-size: 18px;
+  opacity: 0.5;
 }
 
 h1{
@@ -83,17 +95,6 @@ h1{
 
 }
 
-h1:hover{
-  font-family: 'Russo One', sans-serif;
-  cursor: pointer;
-  font-size: 40px;
-
-}
-
-p:hover{
-  font-size: 20px;
-  cursor: pointer;
-}
 
 .Loader {
   border: 16px solid #f3f3f3;
@@ -104,7 +105,9 @@ p:hover{
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+  justify-content: center;
 }
+
 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }

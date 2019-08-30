@@ -1,12 +1,17 @@
 import React from 'react';
 // import logo from './logo.svg';
+import Quote from './components/Quote'
 import './App.css';
-import Quotebox from './components/Quotebox'
+import Box from './components/Quotebox';
+
 
 function App() {
   return (
     <div className="App">
-     <Quotebox/>
+      <Box/>
+      
+      <h1>this is being called</h1>
+     
     </div>
   );
 }

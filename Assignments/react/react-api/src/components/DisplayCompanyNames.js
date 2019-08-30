@@ -10,35 +10,35 @@ class DisplayCompanyName extends Component {
         this.state = {
             infoToggle: false,
             selectedCompany: null,
-            number:0
+            number: 0
         }
     }
 
-    showName(item) {
+    showName = (item) => {
         this.setState({
             infoToggle: !this.state.infoToggle,
             selectedCompany: item,
-            number : item.number
+            //number: item.number
         })
     }
 
     render() {
 
-        
+
         return (
 
             <div className="DisplayCompanyName">
-                        <div>
-                    {this.props.names.length != 0 ? this.props.names.companies.map(item => (
-                        <li key={item.id} onClick={() => this.showName(item)}>
+                <div>
+                    {this.props.names.length !== 0 ? this.props.names.companies.map(item => (
+                        <li key={item.id} onClick={() => this.showName(item)} className="Hover">
                             <strong>Name</strong> : {item.name};
                         </li>
                     )) : <div className="Loader"></div>}
-                        </div>
-                
-                        <div>
-                            <SelectCompany name={this.state.selectedCompany}   />
-                        </div>
+                </div>
+
+                <div>
+                    <SelectCompany name={this.state.selectedCompany} />
+                </div>
             </div>
         );
 
