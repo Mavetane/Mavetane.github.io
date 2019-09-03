@@ -1,11 +1,32 @@
 #wrapper{
-  margin-top: 1000px;
-  border: inset;
+  margin: 300px 400px 300px 600px;
+  border: 10px inset;
+  padding-left: 100px;
+  height: 300px;
+  width: 700px;
+  background-color: white;
+
+}
+.H1{
+  margin-top: 50px;
+  font-size: 35px;
+}
+.Next{
+  position: absolute;
+  justify-content: flex-end;
+}
+.Buttons{
+  display: flex;
+  padding: 70px 0px -20px 300px;
+  position: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+body{
+  background-color: purple;
 }
 
 .Loader {

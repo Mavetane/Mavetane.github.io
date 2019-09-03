@@ -1,5 +1,5 @@
 {
-  "homepage": "https://mavetane.github.io/randomQuoteMachine",
+  "homepage": "https://mavetane.github.io/Assignments/front-end-projects/quoteMachine",
   "name": "quote-machine",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "react-dom": "^16.9.0",
     "react-scripts": "^2.1.8",
     "react-share": "^3.0.0",
+    "react-sharingbuttons": "^1.0.0",
     "react-twitter-embed": "^2.0.8"
   },
   "scripts": {

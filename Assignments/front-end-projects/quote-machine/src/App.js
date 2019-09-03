@@ -2,16 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 import Quote from './components/Quote'
 import './App.css';
-import Box from './components/Quotebox';
+import Quotebox from './components/Quotebox';
 
 
 function App() {
+  console.log('render 2')
   return (
-    <div className="App">
-      <Box/>
-      
-      <h1>this is being called</h1>
-     
+    <div className="App" >
+      <Quotebox/>
     </div>
   );
 }
