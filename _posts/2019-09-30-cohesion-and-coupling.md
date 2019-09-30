@@ -12,3 +12,11 @@ Cohesion refers to what the class (or module) can do. Low cohesion would mean th
 Cohesion is the indication of the relationship within module.Cohesion shows the module’s relative functional strength.Cohesion is a degree (quality) to which a component / module focuses on the single thing.
 While designing you should strive for high cohesion i.e. a cohesive component/ module focus on a single task (i.e., single-mindedness) with little interaction with other modules of the system.
 Cohesion is the kind of natural extension of data hiding for example, class having all members visible with a package having default visibility. Cohesion is Intra – Module Concept.
+
+# Coupling
+
+Coupling refers to how related or dependent two classes/modules are toward each other. For low coupled classes, changing something major in one class should not affect the other. High coupling would make it difficult to change and maintain your code; since classes are closely knit together, making a change could require an entire system revamp. Coupling is the indication of the relationships between modules.
+Coupling shows the relative dependence/interdependence among the modules.Coupling is a degree to which a component / module is connected to the other modules.
+While designing you should strive for low coupling i.e. dependency between modules should be less
+Making private fields, private methods and non public classes provides loose coupling.
+Coupling is Inter -Module Concept.
