@@ -1,6 +1,6 @@
 ---
 layout: post;
-title: Categorizing components
+title: Categorizing components;
 date: 2019-10-10
 ---
 
