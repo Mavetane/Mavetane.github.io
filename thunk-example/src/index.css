@@ -1,0 +1,88 @@
+body {
+  text-align: center;
+  background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/ab/3e.jpg");
+  background: -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+   
+}
+
+.Input {
+  margin-left: 40px;
+  margin-top: 5px;
+}
+.Small-div {
+  border: 2px inset;
+  background-color: rgb(101, 198, 253);
+  padding-left: 10px;
+  width: 336px;
+}
+.Smallest-div {
+  background-color: rgb(101, 198, 253);
+  border: 2px inset white;
+}
+.Books-h1 {
+  font-family: 'Yeseva One', cursive;
+  font-weight: bold;
+  color: darkblue;
+  font-size: 55px;
+}
+.Computers-h1 {
+  font-family: 'Yeseva One', cursive;
+  font-weight: bold;
+  color: darkblue;
+  font-size: 55px;
+}
+.Computers-input {
+  padding-top: 10px;
+}
+.Users-h1 {
+  font-family: 'Yeseva One', cursive;
+  font-weight: bold;
+  color: darkblue;
+  font-size: 55px;
+}
+.App {
+  padding-top: 20px;
+  display: flex;
+}
+.App > div {
+  margin: 10px;
+  padding: 100px;
+}
+.P {
+  margin: 10px
+}
+.Flexing {
+  padding: 0rem 10px;
+  display: flex;
+  border: 3px inset;
+  background-color: rgb(101, 198, 253);
+}
+.Users {
+  font-size: 20px;
+}
+.Users-div {
+  width: 35vh;
+  height: 79vh;
+  cursor: pointer;
+}
+.Books-div {
+  height: 79vh;
+  cursor: pointer;
+}
+.Books {
+  font-size: 20px;
+}
+.Computers {
+  font-size: 20px;
+}
+.Computers-div {
+  height: 79vh;
+  width: 35vh;
+  cursor: pointer;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
