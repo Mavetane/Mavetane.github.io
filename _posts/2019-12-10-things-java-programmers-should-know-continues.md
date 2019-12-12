@@ -14,7 +14,7 @@ This one skill which is highly desirable in the Java world and there are not man
 ## Spring Security 5.0
 
 This is the third major upgrade on Spring Eco-system. The 5th version of popular security framework has several bug fixes and a major OAuth 2 module, which you just can't miss.
-
+ 
 ## Angular 2+ or React JS
 
 These two JavaScript framework has completely change how you develop web applications.
