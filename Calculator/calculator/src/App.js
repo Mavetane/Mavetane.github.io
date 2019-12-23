@@ -28,33 +28,42 @@ class App extends Component {
   }
 
   equals() {
-    debugger;
 
     const workingValues = this.state.currentWorkingValues;
 
     var calcResult = Number(workingValues[0]);
-
+    console.log("Whatever", workingValues)
 
     //[1, "+", 2, "+" , 4]
     for (var i = 1; i < workingValues.length; i++) {
       switch (workingValues[i]) {
         case "+":
-          calcResult = calcResult + Number(workingValues[i + 1])
+          {
+            workingValues[i + 2] == "*" ?
+              calcResult = Number(workingValues[i + 1]) * Number(workingValues[i + 3]) + calcResult
+              : calcResult = calcResult + Number(workingValues[i + 1])
+          }
           break;
         case "-":
-          calcResult = calcResult - Number(workingValues[i + 1])
+          {
+            workingValues[i + 2] == "*" ?
+              calcResult = Number(workingValues[i + 1]) * Number(workingValues[i + 3]) - calcResult
+              : calcResult = calcResult - Number(workingValues[i + 1])
+          }
           break;
         case "*":
           calcResult = calcResult * Number(workingValues[i + 1])
           break;
         case "/":
-          calcResult = calcResult / Number(workingValues[i + 1])
+          {
+            workingValues[i + 2] == "*" ?
+              calcResult = Number(workingValues[i + 1]) * Number(workingValues[i + 3]) :
+              calcResult = calcResult / Number(workingValues[i - 1])
+          }
           break;
-
         default:
           break;
       }
-
     }
 
 

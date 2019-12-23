@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { removeComputers } from '../../actions/remove'
+import { removeComputer } from '../../actions/remove'
 
 
 class Computers extends Component {
@@ -34,13 +34,12 @@ class Computers extends Component {
       name: e.target.value
     })
   }
-
   render() {
-    return <div className="Computers-div">
+    return <div className="Computers-wrapper">
       <h1 className="Computers-h1">Computers</h1>
       {
         this.props.myComputers.map(c =>
-          <div className="Computers" key={c.name}>
+          <div className="Computers-2" key={c.name}>
             <div className="Smallest-div">
               <strong>Name:</strong>{c.name}<br />
               <strong>Date:</strong>{this.state.date}
@@ -49,8 +48,13 @@ class Computers extends Component {
               </button>
             </div></div>)}
       <div className="Computers-input">
-        <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
-        <button onClick={() => this.avoidDuplicate(this.state.name)}><span class="glyphicon glyphicon-plus"></span></button>
+        <input type="text" placeholder="Enter Name"
+          value={this.state.name}
+          name="name" onChange={this.handleChange}
+        />
+        <button onClick={() => this.avoidDuplicate(this.state.name)}>
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
       </div>
     </div>
   }
@@ -69,7 +73,7 @@ const mapDispatchToProps = dispatch => ({
     })
   },
   removeComputer: (id) => {
-    dispatch(removeComputers(id))
+    dispatch(removeComputer(id))
   }
 })
 

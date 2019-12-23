@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getAllUsers, addUser } from '../../redux/users/thunks';
-import { removeUsers } from '../../actions/remove'
+import { removeUser } from '../../actions/remove'
 
 class Users extends Component {
   constructor(props) {
@@ -23,20 +23,20 @@ class Users extends Component {
     })
     if (isFound) {
       alert("Name exists")
-      return 
+      return
     }
-  
+
     if (this.state.newUser.length <= 0) {
       return alert("Input field required");
     }
     this.props.addUser({ first_name: this.state.newUser })
-      this.setState({ newUser: '' })
+    this.setState({ newUser: '' })
   }
   render() {
     const { users } = this.props
     return <div>
       <h1 className="Users-h1">Users</h1>
-      {users.map(u => <div className="Users">
+      {users.map(u => <div className="Users-2">
         <div className="Small-div"><strong>
           <h7>Name:</h7></strong><h7>{u["first_name"]}</h7><br />
           <strong><h7>Date:</h7></strong>{this.state.date}
@@ -45,8 +45,14 @@ class Users extends Component {
           </button>
         </div>
       </div>)}
-      <input type="text" className="Input" placeholder="Name" onChange={this.setValue} value={this.state.newUser} />
-      <button onClick={this.addUser}><span class="glyphicon glyphicon-plus"></span></button>
+      <input type="text" className="Users-input"
+        placeholder="Enter Name"
+        onChange={this.setValue}
+        value={this.state.newUser}
+      />
+      <button onClick={this.addUser} className="Add-user-button">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
     </div>
   }
 }
@@ -63,7 +69,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(addUser(user))
   },
   removeUser: (id) => {
-    dispatch(removeUsers(id))
+    dispatch(removeUser(id))
   }
 })
 

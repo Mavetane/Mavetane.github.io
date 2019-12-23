@@ -1,88 +1,152 @@
-body {
-  text-align: center;
-  background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/ab/3e.jpg");
-  background: -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-   
+.Header {
+ background-color: rgb(3, 3, 78);
+ height: 13vh;
+ color: white;
+ padding: 9px 0px 0px 80vh;
 }
+.Header>h1 {
+  font-size: 40px;
+  font-family: 'Stoke', serif;
+  margin-left: -10px;
+}
+Body {
 
-.Input {
-  margin-left: 40px;
-  margin-top: 5px;
+  background-image: url("https://cdn.pixabay.com/photo/2019/11/19/14/11/landscape-4637538_960_720.jpg");
+  background-size: cover;
 }
-.Small-div {
-  border: 2px inset;
-  background-color: rgb(101, 198, 253);
-  padding-left: 10px;
-  width: 336px;
+.Wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 100px;
 }
-.Smallest-div {
-  background-color: rgb(101, 198, 253);
-  border: 2px inset white;
+.Container {
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: auto;
 }
-.Books-h1 {
-  font-family: 'Yeseva One', cursive;
-  font-weight: bold;
-  color: darkblue;
-  font-size: 55px;
+/* Users */
+.Users {
+background: rgb(204, 204, 204);
+background: rgba(204, 204, 204, 0.5);
+width: 38vh;
+margin: 50px 600px 80px 50px;
+-moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
 }
-.Computers-h1 {
-  font-family: 'Yeseva One', cursive;
-  font-weight: bold;
-  color: darkblue;
-  font-size: 55px;
+.Users-2 {
+  padding: 10px 0px 0px 25px;
 }
-.Computers-input {
-  padding-top: 10px;
+.Users-input {
+  text-align: center;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+  margin: 20px 0px 10px 15px;
 }
 .Users-h1 {
-  font-family: 'Yeseva One', cursive;
-  font-weight: bold;
-  color: darkblue;
-  font-size: 55px;
+  background-color:  rgb(0, 94, 235);
+  margin-top: -1px;
+  color: white;
+  padding: 5px 0px 0px 60px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  height: 50px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
 }
-.App {
-  padding-top: 20px;
-  display: flex;
-}
-.App > div {
-  margin: 10px;
-  padding: 100px;
-}
-.P {
-  margin: 10px
-}
-.Flexing {
-  padding: 0rem 10px;
-  display: flex;
-  border: 3px inset;
-  background-color: rgb(101, 198, 253);
-}
-.Users {
-  font-size: 20px;
-}
-.Users-div {
-  width: 35vh;
-  height: 79vh;
-  cursor: pointer;
-}
-.Books-div {
-  height: 79vh;
-  cursor: pointer;
-}
+/* Books */
 .Books {
-  font-size: 20px;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+  width: 42vh;
+  margin: 50px 80px 80px -280px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
 }
+.Books-2 {
+  padding: 10px 0px 0px 30px;
+}
+.Inputs {
+  padding-left: 30px;
+}
+.Inputs>button {
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+.Books-h1 {
+  background-color:  rgb(0, 94, 235);
+  margin-top: -1px;
+  color: white;
+  padding: 5px 0px 0px 60px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  height: 50px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
+}
+/* Computers */
 .Computers {
-  font-size: 20px;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+  width: 38vh;
+  margin: 50px 400px 80px -650px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
 }
-.Computers-div {
-  height: 79vh;
-  width: 35vh;
-  cursor: pointer;
+.Computers-2 {
+  padding: 10px 0px 0px 50px;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.Computers-input {
+  padding: 10px 0px 0px 10px;
+  
+}
+.Computers-input>input {
+  text-align: center;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+}
+.Computers-input>button {
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+}
+.Computers-h1 {
+  background-color:  rgb(0, 94, 235);
+  margin-top: -1px;
+  color: white;
+  padding: 5px 0px 0px 40px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  height: 50px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 30px;
+}
+
+/* Buttons */
+
+.Smallest-div>button {
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+}
+.Flexing>button {
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+.Small-div>button {
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+.Add-user-button{
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+.Author {
+  text-align: center;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+}
+.Title {
+  text-align: center;
+  background: rgb(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
 }
