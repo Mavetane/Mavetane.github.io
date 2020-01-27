@@ -1,6 +1,7 @@
 *{
     padding:0px;
     margin:0px;
+    color: black;
 }
 
 
@@ -8,8 +9,11 @@
 a{
     text-decoration: none;
     transition: all;
-    color:black;
+    color:white;
     transition-duration: 0.5s;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
 }
 
 li{
@@ -17,23 +21,22 @@ li{
     font-family: Courier New, Courier, monospace;
     text-transform: uppercase;
     font-style: bold;
-
 }
 
 ul{
-    padding:20px;
+    padding:40px 0px 0px 0px;
     display:grid;
     grid-template-columns: 4fr repeat(4 , 1fr);
+    height: 8vh;
+    color: white;
 
 }
-
 nav{
-        background-color:grey;
-        /* color:red; */
+        background-color: black;
 }
 
 a:hover{
-    color:white;
+    color: grey;
 
 }
 
@@ -65,7 +68,6 @@ img{
     border-radius: 50%;
     opacity: 0.5;
 }
-
 
 
 
