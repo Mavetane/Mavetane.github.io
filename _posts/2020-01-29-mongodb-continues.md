@@ -6,6 +6,8 @@ date: 2020-01-20
 
 Collen Maphike
 
+# MongoDB continues
+
 ## Replication
 
 MongoDB provides high availability with replica sets. A replica set consist of two or more copies of the data. Each replica set member may act in the role of primary or secondary replica at any time.
