@@ -1,7 +1,7 @@
 *{
     padding:0px;
     margin:0px;
-    color: black;
+    color: #015668;
 }
 
 
@@ -9,7 +9,7 @@
 a{
     text-decoration: none;
     transition: all;
-    color:white;
+    color: white;
     transition-duration: 0.5s;
     font-size: 30px;
     font-weight: bold;
@@ -26,13 +26,13 @@ li{
 ul{
     padding:40px 0px 0px 0px;
     display:grid;
-    grid-template-columns: 4fr repeat(4 , 1fr);
+    grid-template-columns: 3fr repeat(3, 1fr);
     height: 8vh;
     color: white;
 
 }
 nav{
-        background-color: black;
+        background-color: #015668;
 }
 
 a:hover{
@@ -42,17 +42,20 @@ a:hover{
 
 
 header{
-     background-image: url("photo.jpg");
+     background-image: url("https://cdn.pixabay.com/photo/2020/01/27/09/17/landscape-4796735_960_720.jpg");
+     background-repeat: no-repeat ;
      background-color: #cccccc;
-     height:100vh;
+     height: 88vh;
+     background-size: cover;
 }
 
 h1{
 display: grid;
 padding: 40px 40px 40px 40px;
 text-align: center;
-font-size: 50px;
-
+font-size: 40px;
+color: white;
+font-family: 'Playfair Display SC', serif;
 
 }
 body{
@@ -61,12 +64,37 @@ font-size: 20px;
 
 }
 
+.container{
+  display: flex;
+  margin: 0px 0px 0px 130vh;
+}
+
 img{
-    padding-left: -20px;
-    margin-right: -1em;
     display: block;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     opacity: 0.5;
+    height: 60vh;
+    width: 20vh;
+    /* margin-left: 100vh; */
+    margin: 10px;
+  }
+  #description{
+    height: 60vh;
+    width: 22vh;
+    background-color: #015668;
+    /* opacity: 0.3; */
+    text-decoration: none;
+    /* margin-left: 20vh; */
+    margin: 10px;
+  }
+  
+  #description>p{
+  font-size: 25px;
+  font-family: 'Teko', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 24px;
 }
 
 
