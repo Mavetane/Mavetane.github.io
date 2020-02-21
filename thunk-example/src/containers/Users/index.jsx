@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { getAllUsers, addUser } from '../../redux/users/thunks';
-import { removeUser } from '../../actions/remove'
+import { getAllUsers, addUser, removeUser} from '../../redux/users/thunks';
+// import {  } from '../../actions/remove'
 
 class Users extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Users extends Component {
   }
   addUser = () => {
     const isFound = this.props.users.find(user => {
-      return user.first_name === this.state.newUser
+      return user.name === this.state.newUser
     })
     if (isFound) {
       alert("Name exists")
@@ -29,7 +29,7 @@ class Users extends Component {
     if (this.state.newUser.length <= 0) {
       return alert("Input field required");
     }
-    this.props.addUser({ first_name: this.state.newUser })
+    this.props.addUser({ name: this.state.newUser })
     this.setState({ newUser: '' })
   }
   render() {
@@ -38,9 +38,9 @@ class Users extends Component {
       <h1 className="Users-h1">Users</h1>
       {users.map(u => <div className="Users-2">
         <div className="Small-div"><strong>
-          <h7>Name:</h7></strong><h7>{u["first_name"]}</h7><br />
+          <h7>Name:</h7></strong><h7>{u.name}</h7><br />
           <strong><h7>Date:</h7></strong>{this.state.date}
-          <button onClick={() => this.props.removeUser(u.id)}>
+          <button onClick={() => this.props.removeUser(u._id)}>
             <span class="glyphicon glyphicon-remove"></span>
           </button>
         </div>

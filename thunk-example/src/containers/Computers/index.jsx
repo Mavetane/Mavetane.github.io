@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { removeComputer } from '../../actions/remove'
+// import { removeComputer } from '../../actions/remove'
+import {addComputer, getComputers , removeComputer} from '../../redux/computers/backend'
 
 
 class Computers extends Component {
@@ -11,6 +12,9 @@ class Computers extends Component {
       name: "",
       date: new Date().toLocaleDateString()
     }
+  }
+  componentDidMount(){
+    this.props.getComputers()
   }
   avoidDuplicate = (name, title) => {
     const { myComputers } = this.props
@@ -43,13 +47,14 @@ class Computers extends Component {
             <div className="Smallest-div">
               <strong>Name:</strong>{c.name}<br />
               <strong>Date:</strong>{this.state.date}
-              <button onClick={() => this.props.removeComputer(c.id)}>
+              <button onClick={() => this.props.removeComputer(c._id)}>
                 <span class="glyphicon glyphicon-remove"></span>
               </button>
             </div></div>)}
       <div className="Computers-input">
         <input type="text" placeholder="Enter Name"
           value={this.state.name}
+          required
           name="name" onChange={this.handleChange}
         />
         <button onClick={() => this.avoidDuplicate(this.state.name)}>
@@ -67,10 +72,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   addComputer: (name) => {
-    dispatch({
-      type: "ADD_COMPUTER",
-      payload: { name }
-    })
+    dispatch(addComputer(name));
+  },
+  getComputers: () => {
+    dispatch(getComputers())
   },
   removeComputer: (id) => {
     dispatch(removeComputer(id))

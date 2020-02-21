@@ -8,14 +8,13 @@ export default function counter(state = inititalState, action) {
       return { ...state, all: action.payload, }
     }
     case ADD_USER: {
-      const id = state.all.length == 0 ? 1 : state.all[state.all.length - 1].id + 1
-
-      const newState = { ...state, all: [...state.all, { id, first_name: action.payload.first_name }] }
+      console.log("I'm the payload", action.payload.user.name)
+      const newState = { ...state, all: [...state.all, { id: action.payload.id, name: action.payload.user.name }] }
       
       return newState;
     }
     case REMOVE_USER: {
-      const modifiedState =  { all: [...state.all.filter(user => user.id !== action.payload.id)] }
+      const modifiedState =  { all: [...state.all.filter(user => user._id !== action.payload.id)] }
       return modifiedState
     }
     default:

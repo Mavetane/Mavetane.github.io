@@ -6,7 +6,7 @@ export function removeBook(id) {
     console.log("dd", REMOVE_BOOK)
     return {
         type: REMOVE_BOOK,
-        payload: id
+        payload: {id}
     }
 }
 

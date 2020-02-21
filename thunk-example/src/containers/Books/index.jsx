@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { displayButton } from '../../actions/toggle'
-import { removeBook } from '../../actions/remove'
+// import { removeBook } from '../../actions/remove'
 import { ADD_BOOK, REMOVE_BOOK } from '../../redux/books/actionTypes'
+import {addBook, getBooks, removeBook, editBook} from '../../redux/books/backend'
 
 class Books extends Component {
   constructor(props) {
@@ -15,6 +16,9 @@ class Books extends Component {
       editMode: false,
       id: ""
     }
+  }
+  componentDidMount(){
+    this.props.getBooks()
   }
   preventDuplication = (name, title) => {
     const { availableBooks } = this.props
@@ -44,8 +48,11 @@ class Books extends Component {
     })
 
   }
-  handleEdit = (title, id) => {
-    this.props.editBook(title, id)
+  handleEdit = (title,id) => {
+    const {availableBooks}=this.props
+    // let book = availableBooks.find((book => book._id === id))
+    
+    this.props.editBook(title,id)
     this.setState({
       editMode: !this.state.editMode,
       id: id
@@ -60,13 +67,13 @@ class Books extends Component {
           <div className="Books-2" onClick={(name) => this.props.toggleBook(b.name)} key={b.name}>
             <div className="Flexing">
               <div><strong>Author:</strong> {b.name}</div><br />
-              <div><strong>Title/s:</strong> {b.title.map(t => <li>{t}</li>)}</div>
+              <div><strong>Title/s:</strong> {b.title}</div>
               <strong>Date: {new Date().toLocaleDateString()}</strong>
               <span style={{ margin: "20px" }} onClick={() =>
-                this.changeEdit(b.tittle, b.id)}
+                this.changeEdit(b.tittle, b._id)}
                 class="glyphicon">&#x270f;
               </span>
-              <button onClick={() => this.props.removeBook(b.id)}>
+              <button onClick={() => this.props.removeBook(b._id)}>
                 <span class="glyphicon glyphicon-remove"></span>
               </button>
             </div>
@@ -108,16 +115,13 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   addBook: (name, title) => {
-    dispatch({
-      type: ADD_BOOK,
-      payload: { name, title }
-    })
+    dispatch(addBook(name, title))
+  },
+  getBooks: () => {
+    dispatch(getBooks())
   },
   editBook: (title, id) => {
-    dispatch({
-      type: "EDIT_BOOK",
-      payload: { title, id }
-    })
+    dispatch(editBook(title, id))
   },
   removeBook: (id) => {
     dispatch(removeBook(id))

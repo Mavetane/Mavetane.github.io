@@ -1,28 +1,30 @@
-import { ADD_BOOK, REMOVE_BOOK } from '../books/actionTypes'
+import { ADD_BOOK, REMOVE_BOOK, SHOW_BOOKS, EDIT_BOOK } from '../books/actionTypes'
 
 const initialState = {
-  availableBooks: [{
-    name: "Trevor",
-    title: ["Born a crime"],
-    id: 1,
-    isToggle: false
-  }]
+  availableBooks: []
 }
 
 export default function books(state = initialState, action) {
   switch (action.type) {
+    case SHOW_BOOKS: {
+      return {
+        ...state,
+        availableBooks: action.payload 
+      };
+    }
     case ADD_BOOK: {
-      const id = state.availableBooks.length == 0 ? 1: state.availableBooks[state.availableBooks.length - 1].id+1
-      const newState = { availableBooks: [...state.availableBooks, {id, name: action.payload.name, title: [action.payload.title]}] }
+      const newState = { availableBooks: [...state.availableBooks, {id: action.payload.id, name: action.payload.name, title: [action.payload.title]}] }
       return newState
     }
-    case "EDIT_BOOK": {
-      let index = state.availableBooks.findIndex((book => book.id == action.payload.id));
-      state.availableBooks[index].title = [...state.availableBooks[index].title, action.payload.title];
+    case EDIT_BOOK: {
+      let index = state.availableBooks.findIndex((book => book._id == action.payload.id));
+      console.log("I'm index", index)
+      state.availableBooks[index].title = action.payload.title;
       return state
     }
     case REMOVE_BOOK: {
-      return { availableBooks: [...state.availableBooks.filter(book => book.id !== action.payload)] }
+      console.log(state.availableBooks)
+      return { availableBooks: [...state.availableBooks.filter(book => book._id !== action.payload.id)] }
     }
     default: {
       return state
