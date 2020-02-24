@@ -20,7 +20,6 @@ const books = (app) => {
         }catch (e) {
             console.log(e)
         }
-      
     
     })
     
