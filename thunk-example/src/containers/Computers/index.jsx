@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { removeComputer } from '../../actions/remove'
-import {addComputer, getComputers , removeComputer} from '../../redux/computers/backend'
+import { addComputer, getComputers, removeComputer } from '../../redux/computers/backend'
 
 
 class Computers extends Component {
@@ -10,10 +10,11 @@ class Computers extends Component {
     super(props)
     this.state = {
       name: "",
-      date: new Date().toLocaleDateString()
+      date: new Date().toLocaleDateString(),
+      search: ""
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     this.props.getComputers()
   }
   avoidDuplicate = (name, title) => {
@@ -38,13 +39,20 @@ class Computers extends Component {
       name: e.target.value
     })
   }
+  updateSearch = (e) => {
+    this.setState({ search: e.target.value.substr(0,
+20) })
+  }
   render() {
+    let filteredComputers = this.props.myComputers
+
     return <div className="Computers-wrapper">
       <h1 className="Computers-h1">Computers</h1>
       {
-        this.props.myComputers.map(c =>
+        filteredComputers.map(c =>
           <div className="Computers-2" key={c.name}>
             <div className="Smallest-div">
+
               <strong>Name:</strong>{c.name}<br />
               <strong>Date:</strong>{this.state.date}
               <button onClick={() => this.props.removeComputer(c._id)}>
