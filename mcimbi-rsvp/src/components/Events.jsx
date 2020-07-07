@@ -9,7 +9,9 @@ class Events extends Component {
             isToggle: true,
             durbanInfo: false,
             freeStateInfo: false,
-            afropunkInfo: false
+            afropunkInfo: false,
+            motherCityInfo: false,
+            cherryInfo: false
 
         }
     }
@@ -35,8 +37,18 @@ class Events extends Component {
             afropunkInfo: !this.state.afropunkInfo
         })
     }
+    displayMotherCity = () => {
+        this.setState({
+            motherCityInfo: !this.state.motherCityInfo
+        })
+    }
+    displayCherry = () => {
+        this.setState({
+            cherryInfo: !this.state.cherryInfo
+        })
+    }
     render() {
-        const { isToggle, durbanInfo, freeStateInfo, afropunkInfo } = this.state;
+        const { isToggle, durbanInfo, cherryInfo, freeStateInfo, afropunkInfo, motherCityInfo } = this.state;
         return (
             <div>
                 <h3 className="Events-h3" onClick={() => this.displayEvents()}>Events</h3>
@@ -84,29 +96,30 @@ class Events extends Component {
                                         alt="afr" className="Afro-3" />
                                 </div>
                             </div> : <div className="Afropunk-form"><Form /></div>}
-
-                        <div className="Mother-City-Queer-Project">
-                            <h4>Mother City Queer Project</h4>
-                            <div className="Mother-city-info">
-                                <img src="https://mollysmit.co.za/wp-content/uploads/2016/04/mcqp.jpg"
-                                    alt="mcqp" className="mcqp-1" />
-                                <br />
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWyFNxgNuC7i9t3BJ40-5cLKgQTAkZn0c9jg&usqp=CAU"
-                                    alt="gay parade" className="mcqp-2" />
-                            </div>
-                        </div>
-                        <div className="Cherry-picking-festival">
-                            <h4>Cherry Picking Festival</h4>
-                            <div className="Cherry-onfo">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRxlJ4Pi8kHva3m5WFqx2OrrleRiPzozRMn7Q&usqp=CAU"
-                                    alt="cherries" className="cherry-1" />
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyb0JLJR7cgnLSdo6q_ZkpNc3dwQj_hL0Rjg&usqp=CAU"
-                                    alt="cherry pickers" className="cherry-2" />
-                                <br />
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlrvFZmlBKYj_MnGmTZe1qVSzMafyyJ_xl1w&usqp=CAU"
-                                    alt="logo" className="cherry-3" />
-                            </div>
-                        </div>
+                        {motherCityInfo === false ?
+                            <div className="Mother-City-Queer-Project">
+                                <h4>Mother City Queer Project</h4>
+                                <div className="Mother-city-info" onClick={() => this.displayMotherCity()}>
+                                    <img src="https://mollysmit.co.za/wp-content/uploads/2016/04/mcqp.jpg"
+                                        alt="mcqp" className="mcqp-1" />
+                                    <br />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWyFNxgNuC7i9t3BJ40-5cLKgQTAkZn0c9jg&usqp=CAU"
+                                        alt="gay parade" className="mcqp-2" />
+                                </div>
+                            </div> : <div className="Mother-city-form"><Form /></div>}
+                        {cherryInfo === false ?
+                            <div className="Cherry-picking-festival">
+                                <h4>Cherry Picking Festival</h4>
+                                <div className="Cherry-onfo" onClick={() => this.displayCherry()}>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRxlJ4Pi8kHva3m5WFqx2OrrleRiPzozRMn7Q&usqp=CAU"
+                                        alt="cherries" className="cherry-1" />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyb0JLJR7cgnLSdo6q_ZkpNc3dwQj_hL0Rjg&usqp=CAU"
+                                        alt="cherry pickers" className="cherry-2" />
+                                    <br />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlrvFZmlBKYj_MnGmTZe1qVSzMafyyJ_xl1w&usqp=CAU"
+                                        alt="logo" className="cherry-3" />
+                                </div>
+                            </div> : <div className="Cherry-form"><Form /></div>}
                     </div>
                     : null}
             </div>
