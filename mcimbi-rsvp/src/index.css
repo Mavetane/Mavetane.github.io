@@ -7,7 +7,7 @@ body {
 /* Durban July */
 .Durban-july{
   margin: 0px 135vh 0px 5vh;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 .Durban-july>h4{
   margin: 0px 0px 10px 16vh;
@@ -35,7 +35,7 @@ body {
 /* FreeState Wine show */
 .Freestate-wine-show {
   margin: -30vh 64vh 0px 60vh;
-  background-color: pink;
+  /* background-color: pink; */
 }
 .Freestate-wine-show>h4 {
   margin-left: 20vh;
