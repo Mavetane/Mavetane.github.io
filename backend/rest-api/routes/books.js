@@ -1,18 +1,49 @@
 const BooksModel = require('../models/books')
-const { check, validationResult } = require('express-validator');
 
 
 const books = (app) => {
-    app.get('/books', async (req, res) => {
+
+
+    app.get('/bookss', async (req, res) => {
         try {
-            var books = await BooksModel.find()
-            res.send(books)
+            const paginatedBooks = await BooksModel.find().skip(Number(req.query.skip))
+                .limit(Number(req.query.limit))
+            var books = paginatedBooks
+            console.log("Length", paginatedBooks[paginatedBooks.length -1])
+           
+            const results = books.map(book => {
+                return {
+                    id: book._id,
+                    name: book.name,
+                    title: book.title,
+                    date: book.date
+                }
+            })
+            res.status(201).json(results)
         } catch (e) {
+            
             console.log(e)
         }
     })
 
+
     app.post('/books', async (req, res) => {
+        const compareBooks = await BooksModel.find()
+        for (var i in compareBooks) {
+            if (req.body.title.toUpperCase().trim() == compareBooks[i].title.toUpperCase().trim()) {
+                return res.status(400).json("Book already exist")
+            }
+            console.log("I'm I", compareBooks[i].name)
+        }
+        if (req.body.title == "" && req.body.name == "") {
+            return res.status(400).json("Both fields are required")
+        }
+        if (req.body.name == "") {
+            return res.status(400).json("Name field is required")
+        }
+        if (req.body.title == "") {
+            return res.status(400).json("Title field is required")
+        }
 
         var newBook = new BooksModel({
             name: req.body.name,
@@ -20,8 +51,14 @@ const books = (app) => {
         })
         try {
             const dbResult = await newBook.save();
-            console.log(dbResult)
-            res.send(201)
+
+            const sanitizedBooks = {
+                id: dbResult.id,
+                name: dbResult.name,
+                title: dbResult.title,
+                date: dbResult.date
+            }
+            res.send(sanitizedBooks)
         } catch (e) {
             console.log(e)
         }
@@ -48,6 +85,38 @@ const books = (app) => {
             console.log(e)
         }
     })
+
+
+    
+    //         const page = parseInt(req.query.page)
+    //         const limit = parseInt(req.query.limit)
+
+    //         const startIndex = (page - 1) * limit
+    //         const endIndex = page * limit
+
+    //         const results = {}
+
+    //         if (endIndex < model.length) {
+    //             results.next = {
+    //                 page: page + 1,
+    //                 limit: limit
+    //             }
+    //         }
+
+    //         if (startIndex > 0) {
+    //             results.previous = {
+    //                 page: page - 1,
+    //                 limit: limit
+    //             }
+    //         }
+    //         try {
+    //             results.results = await model.find().limit(limit).skip(startIndex).exec()
+    //             next()
+    //             res.paginatedResults = results
+    //         } catch (e) {
+    //             res.status(500).json({ message: e.message })
+    //         }
+
 
 }
 module.exports = { books };

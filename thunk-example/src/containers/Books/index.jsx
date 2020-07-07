@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import moment from 'moment'
+import Pagination from '../Books/Pagination'
 import { displayButton } from '../../actions/toggle'
-// import { removeBook } from '../../actions/remove'
 import { ADD_BOOK, REMOVE_BOOK } from '../../redux/books/actionTypes'
-import { addBook, getBooks, removeBook, editBook } from '../../redux/books/backend'
+import { addBook, getBooks, removeBook, editBook, searchContent } from '../../redux/books/backend'
 
 class Books extends Component {
   constructor(props) {
@@ -16,11 +17,16 @@ class Books extends Component {
       editMode: false,
       id: "",
       search: "",
-      toggleSearch: false
+      toggleSearch: false,
+      findAurthor: "",
+      findTitle: "",
+      loading: false,
+      currentPage: 1,
+      postsPerPage: 5
     }
   }
   componentDidMount() {
-    this.props.getBooks()
+    this.props.getBooks(1, 5)
   }
   preventDuplication = (name, title) => {
     const { availableBooks } = this.props
@@ -40,6 +46,7 @@ class Books extends Component {
       name: "",
       title: ""
     })
+    this.props.getBooks(1, 5)
   }
   changeEdit = (title, id) => {
     this.setState({
@@ -59,6 +66,7 @@ class Books extends Component {
     })
   }
   handleSearch = (e) => {
+    this.props.searchBook(this.state.findAurthor, this.state.findTitle)
     this.setState({
       search: e.target.value.substr(0, 20)
     })
@@ -68,14 +76,22 @@ class Books extends Component {
       toggleSearch: !this.state.toggleSearch
     })
   }
+
+  
   render() {
-    const { search, name, title, toggleSearch } = this.state
-    let filteredBooks = this.props.availableBooks.filter(
-      (book) => {
-        return book.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-          book.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
-      }
-    )
+    const { search, name, title, toggleSearch, currentPage, postsPerPage } = this.state
+    let filteredBooks = this.props.availableBooks
+      .map(post => ({ ...post, date: new Date(post.date) }))
+      .sort((a, b) => {
+        return b.date.getTime() - a.date.getTime()
+      })
+
+    //Current post
+
+    const indexOfLastPost = currentPage * postsPerPage
+    const indexOfFirstPost = indexOfLastPost - postsPerPage
+    const currentPost = filteredBooks.slice(indexOfFirstPost, indexOfLastPost)
+
     return <div>
       <div>
         <h1 className="Books-h1">Books</h1>
@@ -84,21 +100,24 @@ class Books extends Component {
           class="books-search-input"
           placeholder="search"
           onChange={this.handleSearch} /> : null}
+        <Pagination postsPerPage={postsPerPage}
+          totalPosts={filteredBooks.length}
+          currentPage={currentPage} />
         <button id="search-books" type="button" class="btn btn-info" onClick={() => this.isToggle()}>
           <span class="glyphicon glyphicon-search"></span> Search
         </button>
-        <div> {filteredBooks.map(b =>
+        <div> {currentPost.map(b =>
           <div className="Books-2" onClick={(name) => this.props.toggleBook(b.name)} key={b.name}>
             <div className="Flexing">
               <div><strong>Author:</strong> {b.name}</div><br />
               <div><strong>Title/s:</strong> {b.title}</div>
-              <strong>Date: {new Date().toLocaleDateString()}</strong>
+              <strong>Date: {moment(b.date).format('LLL')}</strong>
 
               <span style={{ margin: "20px" }} onClick={() =>
-                this.changeEdit(b.title, b._id)}
+                this.changeEdit(b.title, b.id)}
                 class="glyphicon">&#x270f;
               </span>
-              <button onClick={() => this.props.removeBook(b._id)}>
+              <button onClick={() => this.props.removeBook(b.id)}>
                 <span class="glyphicon glyphicon-remove"></span>
               </button>
             </div>
@@ -149,8 +168,11 @@ const mapDispatchToProps = dispatch => ({
   addBook: (name, title) => {
     dispatch(addBook(name, title))
   },
+  searchBook: (findAurthor, findTitle) => {
+    dispatch(searchContent(findAurthor, findTitle))
+  },
   getBooks: () => {
-    dispatch(getBooks())
+    dispatch(getBooks(1, 5))
   },
   editBook: (title, id) => {
     dispatch(editBook(title, id))

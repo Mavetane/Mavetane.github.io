@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const {searchBar} = require('./routes/searchBar')
 const mongoose = require('mongoose')
 const {computers} = require('./routes/computes');
 const {users} = require('./routes/users');
@@ -11,7 +12,8 @@ require('dotenv').config()
 app.use(bodyParser.json())
 app.use(cors())
 users(app);
-books(app)
+searchBar(app);
+books(app);
 computers(app);
 mongoose.connect(process.env.backendURL, 
     {useNewUrlParser: true, useUnifiedTopology: true}).

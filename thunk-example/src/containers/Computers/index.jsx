@@ -55,7 +55,7 @@ class Computers extends Component {
 
               <strong>Name:</strong>{c.name}<br />
               <strong>Date:</strong>{this.state.date}
-              <button onClick={() => this.props.removeComputer(c._id)}>
+              <button onClick={() => this.props.removeComputer(c.id)}>
                 <span class="glyphicon glyphicon-remove"></span>
               </button>
             </div></div>)}

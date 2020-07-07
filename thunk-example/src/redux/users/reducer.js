@@ -14,7 +14,7 @@ export default function counter(state = inititalState, action) {
       return newState;
     }
     case REMOVE_USER: {
-      const modifiedState =  { all: [...state.all.filter(user => user._id !== action.payload.id)] }
+      const modifiedState =  { all: [...state.all.filter(user => user.id !== action.payload.id)] }
       return modifiedState
     }
     default:

@@ -46,7 +46,7 @@ class Users extends Component {
         <div className="Small-div"><strong>
           <h7>Name:</h7></strong><h7>{u.name}</h7><br />
           <strong><h7>Date:</h7></strong>{date}
-          <button onClick={() => this.props.removeUser(u._id)}>
+          <button onClick={() => this.props.removeUser(u.id)}>
             <span class="glyphicon glyphicon-remove"></span>
           </button>
         </div>

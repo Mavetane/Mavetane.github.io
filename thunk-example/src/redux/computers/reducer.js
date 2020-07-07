@@ -18,7 +18,7 @@ export default function computers(state = initialState, action) {
       return newState
     }
     case REMOVE_COMPUTER: {
-    const  modifiedState = {myComputers: [...state.myComputers.filter(computer => computer._id !== action.payload.id)]} 
+    const  modifiedState = {myComputers: [...state.myComputers.filter(computer => computer.id !== action.payload.id)]} 
       return modifiedState
     }
     default: {
