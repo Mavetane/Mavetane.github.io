@@ -28,6 +28,7 @@ class Books extends Component {
   componentDidMount() {
     this.props.getBooks(1, 5)
   }
+
   preventDuplication = (name, title) => {
     const { availableBooks } = this.props
     for (var i in availableBooks) {
@@ -48,6 +49,7 @@ class Books extends Component {
     })
     this.props.getBooks(1, 5)
   }
+  
   changeEdit = (title, id) => {
     this.setState({
       editMode: !this.state.editMode,

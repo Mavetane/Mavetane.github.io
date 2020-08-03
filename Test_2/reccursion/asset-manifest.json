@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Collen163030/Test_2/reccursion/static/css/main.5f361e03.chunk.css",
+    "main.js": "/Collen163030/Test_2/reccursion/static/js/main.bca8dc7a.chunk.js",
+    "main.js.map": "/Collen163030/Test_2/reccursion/static/js/main.bca8dc7a.chunk.js.map",
+    "runtime-main.js": "/Collen163030/Test_2/reccursion/static/js/runtime-main.2cd73c74.js",
+    "runtime-main.js.map": "/Collen163030/Test_2/reccursion/static/js/runtime-main.2cd73c74.js.map",
+    "static/js/2.1449581f.chunk.js": "/Collen163030/Test_2/reccursion/static/js/2.1449581f.chunk.js",
+    "static/js/2.1449581f.chunk.js.map": "/Collen163030/Test_2/reccursion/static/js/2.1449581f.chunk.js.map",
+    "index.html": "/Collen163030/Test_2/reccursion/index.html",
+    "precache-manifest.6c9de36b0eeefbb3c2401e5b7fde6919.js": "/Collen163030/Test_2/reccursion/precache-manifest.6c9de36b0eeefbb3c2401e5b7fde6919.js",
+    "service-worker.js": "/Collen163030/Test_2/reccursion/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/Collen163030/Test_2/reccursion/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.1449581f.chunk.js.LICENSE.txt": "/Collen163030/Test_2/reccursion/static/js/2.1449581f.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Collen163030/Test_2/reccursion/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2cd73c74.js",
+    "static/js/2.1449581f.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.bca8dc7a.chunk.js"
+  ]
+}

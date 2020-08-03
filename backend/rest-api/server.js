@@ -6,8 +6,8 @@ const {computers} = require('./routes/computes');
 const {users} = require('./routes/users');
 const {books} = require('./routes/books')
 const bodyParser = require('body-parser');
-const cors = require('cors')
-require('dotenv').config()
+const cors = require('cors');
+require('dotenv').config();
 
 app.use(bodyParser.json())
 app.use(cors())

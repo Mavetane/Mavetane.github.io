@@ -13,7 +13,7 @@ class Form extends Component {
     onSubmit = () => {
 
         console.log("I'm state", this.state)
-        window.location.reload();
+        // window.location.reload();
 
     }
 
