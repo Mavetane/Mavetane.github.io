@@ -1,0 +1,14 @@
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.csprojAssemblyReference.cache
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.csproj.CoreCompileInputs.cache
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.AssemblyInfoInputs.cache
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.AssemblyInfo.cs
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/chromeopener.deps.json
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/chromeopener.runtimeconfig.json
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/chromeopener.runtimeconfig.dev.json
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/chromeopener.dll
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/chromeopener.pdb
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.dll
+/home/tcg-pc1/workspace/chromeopener/obj/Debug/netcoreapp2.2/chromeopener.pdb
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/home/tcg-pc1/workspace/chromeopener/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
