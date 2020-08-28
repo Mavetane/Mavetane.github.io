@@ -12,6 +12,12 @@ const Recipe = () => {
     setRecipe({ ...recipe, [e.target.name]: e.target.value })
   }
   const submit = () => {
+    if (recipe.recipeName === "" || recipe.ingredients === "") {
+      return alert("Input fields are required")
+    }
+    if (recipe.recipeName === "") alert("Enter recip field")
+    if (recipe.ingredients === "") alert("Enter ingredient field")
+
     dispatch(addRecipe(recipe));
   }
   return (

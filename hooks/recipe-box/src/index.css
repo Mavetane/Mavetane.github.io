@@ -11,7 +11,13 @@ code {
 
 .Recipe-details>label {
   font-size: 25px;
-  font-weight: bold;
+  font-family: 'Acme', sans-serif;
+}
+
+.Recipe-details {
+  font-family: 'Fjalla One', sans-serif;
+  border: 1px solid lightgreen;
+  width: inherit;
 }
 
 .Recipe-names {
