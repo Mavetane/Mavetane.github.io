@@ -11,17 +11,21 @@ const Recipe = () => {
     e.preventDefault()
     setRecipe({ ...recipe, [e.target.name]: e.target.value })
   }
-
   const submit = () => {
-    dispatch(addRecipe(recipe))
+    dispatch(addRecipe(recipe));
   }
   return (
-    <div>
+    <div className="Recipe-wrapper">
+      <label>Recipe Name</label>
       <input type="text" onChange={handleChange} value={recipe.recipeName}
         name="recipeName" placeholder="Violate cake"
       />
+      <br />
+      <label>Ingredients</label>
       <input type="text" onChange={handleChange} value={recipe.ingredients}
         name="ingredients" placeholder="flour, baking powerder, salt, eggs ..." />
+      <p>Enter ingredients seperated by commas,</p>
+      <br />
       <button onClick={() => submit(recipe)}>addRecipe</button>
     </div>
   )

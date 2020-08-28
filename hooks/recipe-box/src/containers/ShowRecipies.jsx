@@ -1,27 +1,32 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+// import Recipe from './Recipe';
 
 const ShowRecipies = () => {
   const recipes = useSelector(state => state.recipe.recipes);
-  const [state, setState] = useState(false)
-  const show = () => {
-    setState(!state)
-    console.log(state)
+  const [selectedRecipe, setSelectedR] = useState({});
+
+  const show = (item) => {
+    setSelectedR(item)
   }
 
-  const recipeName = recipes.map(item => (<div key={item.recipeName}>
-    {state === false ? <label onClick={show}>{item.recipeName}</label> : null}
-    {state ? <div>
-      {item.ingredient}
-    </div> : null}
 
-  </div>))
-
-  console.log(recipeName)
+  const recipe = () => recipes.map(item => (
+    <div key={item.recipeName} className="Map">
+      {<h2 onClick={() => show(item)}>{item.recipeName}</h2>}
+    </div>))
+  console.log('recipes', recipes)
   return (
-    <div>
-      {recipeName}
+
+    <div className="Wrapper">
+      <div className="Recipe-names">
+        {recipe()}
+      </div>
+      <div className="Recipe-details">
+        <label>{selectedRecipe.recipeName}</label><br />
+        {selectedRecipe.ingredients}
+      </div>
     </div>
   )
 }

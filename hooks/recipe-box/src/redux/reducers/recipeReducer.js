@@ -11,7 +11,7 @@ const initialState = {
 const recipeReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_RECIPE:
-      return { ...state, recipes: action.payload }
+      return { ...state, recipes: [...state.recipes, action.payload] }
     default:
       return state;
   }

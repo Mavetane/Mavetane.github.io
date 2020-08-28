@@ -1,16 +1,24 @@
 import React from 'react';
 import './App.css';
-// import Recipe from './containers/Recipe';
-import ShowRecipies from './containers/ShowRecipies'
+import Recipe from './containers/Recipe';
+import ShowRecipies from './containers/ShowRecipies';
+import { useState } from 'react';
 
 function App () {
+  const [state, setState] = useState(false);
+
+  const addRecipe = () => {
+    setState(!state)
+  }
   return (
     <div className="App">
       <header className="App-header">
-        Recipe Box
+        Collen's Recipe Box
       </header>
-      {/* <Recipe /> */}
       <ShowRecipies />
+      {state ? <Recipe /> : null}<br />
+      {!state ? <button onClick={addRecipe}>Add recipe</button> :
+        <button onClick={addRecipe}>close</button>}
     </div>
   );
 }
