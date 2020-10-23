@@ -1,5 +1,5 @@
 ---
-layout: post,
+layout: post
 title: Taxi tracking App
 date: 2020-10-23
 ---
